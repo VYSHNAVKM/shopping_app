@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shopping_app/model/model.dart';
 import 'package:shopping_app/provider/shopping_app_provider.dart';
 import 'package:shopping_app/view/home_screen/home_screen.dart';
 
@@ -13,16 +12,31 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         centerTitle: true,
-        title: Text('Cart'),
+        title: Text(
+          'Cart',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+            color: Colors.black,
+          ),
+        ),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+            )),
       ),
       body: context.watch<ShoppingAppProvider>().cartcount == 0
           ? Center(
               child: Text(
                 'Empty Cart',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -40,8 +54,7 @@ class CartScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              height: 180,
-                              width: 350,
+                              width: MediaQuery.of(context).size.width * 0.99,
                               color: Colors.black,
                               child: Row(
                                 children: [
@@ -100,7 +113,8 @@ class CartScreen extends StatelessWidget {
                                           child: Row(
                                             children: [
                                               CircleAvatar(
-                                                radius: 15,
+                                                backgroundColor: Colors.white,
+                                                radius: 20,
                                                 child: IconButton(
                                                     onPressed: () {
                                                       context
@@ -113,14 +127,15 @@ class CartScreen extends StatelessWidget {
                                                     },
                                                     icon: Icon(
                                                       Icons.add,
-                                                      size: 15,
+                                                      size: 20,
                                                     )),
                                               ),
                                               SizedBox(
                                                 width: 30,
                                               ),
                                               CircleAvatar(
-                                                radius: 15,
+                                                backgroundColor: Colors.white,
+                                                radius: 20,
                                                 child: IconButton(
                                                     onPressed: context
                                                                 .watch<
@@ -141,7 +156,7 @@ class CartScreen extends StatelessWidget {
                                                           },
                                                     icon: Icon(
                                                       Icons.remove,
-                                                      size: 15,
+                                                      size: 20,
                                                     )),
                                               ),
                                             ],
@@ -154,9 +169,15 @@ class CartScreen extends StatelessWidget {
                                             style: ButtonStyle(
                                                 backgroundColor:
                                                     MaterialStatePropertyAll(
-                                                        Colors.grey.shade700)),
+                                                        Colors.white)),
                                             onPressed: () {},
-                                            child: Text('Make a payment'))
+                                            child: Text(
+                                              'Make a payment',
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 17,
+                                                  color: Colors.black),
+                                            ))
                                       ],
                                     ),
                                   ),

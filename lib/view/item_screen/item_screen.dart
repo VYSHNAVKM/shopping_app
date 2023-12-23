@@ -15,9 +15,24 @@ class ItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           centerTitle: true,
-          title: Text('ITEMS'),
+          title: Text(
+            'ITEMS',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+              color: Colors.black,
+            ),
+          ),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.black,
+              )),
           actions: [
             context.read<ShoppingAppProvider>().cartcount == 0
                 ? IconButton(
@@ -30,6 +45,7 @@ class ItemScreen extends StatelessWidget {
                     },
                     icon: Icon(
                       Icons.shopping_cart,
+                      color: Colors.black,
                       size: 30,
                     ))
                 : Stack(

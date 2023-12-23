@@ -19,13 +19,18 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           centerTitle: true,
-          title: Text('ITEMS'),
+          title: Text(
+            'ITEMS',
+            style: TextStyle(
+                fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+          ),
           leading: IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.person,
+                color: Colors.black,
                 size: 30,
               )),
           actions: [
@@ -40,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     icon: Icon(
                       Icons.shopping_cart,
+                      color: Colors.black,
                       size: 30,
                     ))
                 : Stack(
@@ -77,14 +83,19 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               width: 300,
               child: SearchBar(
-                  hintText: 'Search anything',
-                  backgroundColor:
-                      MaterialStatePropertyAll(Colors.grey.shade300),
-                  leading: Icon(
-                    Icons.search,
-                    size: 30,
-                  ),
-                  shadowColor: MaterialStatePropertyAll(Colors.black)),
+                hintText: 'Search anything',
+                hintStyle: MaterialStatePropertyAll(TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                  color: Colors.white,
+                )),
+                backgroundColor: MaterialStatePropertyAll(Colors.black),
+                leading: Icon(
+                  Icons.search,
+                  color: Colors.white,
+                  size: 30,
+                ),
+              ),
             ),
             SizedBox(
               width: 10,
