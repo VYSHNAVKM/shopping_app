@@ -2,15 +2,28 @@
 
 A new Flutter project.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+## HOMESCREEN
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot_1703325604](https://github.com/VYSHNAVKM/shopping_app/assets/129362435/03069e37-1f09-43cd-830a-57a77db12018)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ITEM SCREEN
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1703325612](https://github.com/VYSHNAVKM/shopping_app/assets/129362435/169899ad-a1ad-4b34-b026-ea37341a2526)
+
+## CART SCREEN
+
+![Screenshot_1703326203](https://github.com/VYSHNAVKM/shopping_app/assets/129362435/88f58226-200c-460d-b50d-aead183a6c7d)
+
+
+
+
+
+
+
+
+
+
+
+
